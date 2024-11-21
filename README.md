@@ -36,21 +36,20 @@ while validating the model's efficacy during training.
 
 # 3. Model Training
 <div align="justify">
-Load the data using the roboflow link in the notebook. If the dataset loading fails for you, you can use the dataset provided in this repository with JSON files containing the annotations. Training of the YOLOv5 model is conducted using the motorcycle helmet detection dataset. The 
-model is optimized using stochastic gradient descent (SGD) with momentum, and learning rate 
-scheduling techniques are employed to prevent overfitting and achieve optimal performance. The 
-dataset is partitioned into training, validation, and test sets to accurately assess the model's 
-generalization ability. 
-Performance evaluation is carried out on the test set using standard metrics such as mean average 
-precision (mAP) and precision-recall curves to quantify the model's effectiveness in detecting 
-motorcycle riders wearing helmets. Additionally, qualitative analysis through visual inspection of 
-model predictions is performed to identify potential failure cases and areas for improvement.
+Load the data using the roboflow link in the notebook. If the dataset loading fails for you, you can use the dataset provided in this repository with JSON files containing the annotations. Training of the YOLOv5 model is conducted using the motorcycle helmet detection dataset. The model is optimized using stochastic gradient descent (SGD) with momentum, and learning rate scheduling techniques are employed to prevent overfitting and achieve optimal performance. The dataset is partitioned into training, validation, and test sets to accurately assess the model's generalization ability. Performance evaluation is carried out on the test set using standard metrics such as mean average precision (mAP) and precision-recall curves to quantify the model's effectiveness in detecting motorcycle riders wearing helmets. Additionally, qualitative analysis through visual inspection of model predictions is performed to identify potential failure cases and areas for improvement.
 </div>
+
+## Training Script
+
+Here is an example of a training script for your model:
+
 ```python
 RES_DIR = set_res_dir()
 if TRAIN:
     !python train.py --data ../data.yaml --weights yolov5s.pt \
     --img 640 --epochs {EPOCHS} --batch-size 16 --name {RES_DIR}\
     --project /content/Model_Weights  # <-- This is where the best and last training weights are stored.
+
+
 
 
