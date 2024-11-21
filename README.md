@@ -64,3 +64,4 @@ def inference(RES_DIR, data_path):
 ```python
 IMAGE_INFER_DIR = inference("path to model weights","path to the image you wanna do inference")
 ```
+Sample images from google have been added in Images directory on which i compiled the inference
