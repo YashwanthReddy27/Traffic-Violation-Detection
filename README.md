@@ -40,8 +40,7 @@ Load the data using the roboflow link in the notebook. If the dataset loading fa
 </div>
 
 ## Training Script
-
-Here is an example of a training script for your model:
+In this part of code block you can change the directory in collab where you want to store the model weights
 
 ```python
 RES_DIR = set_res_dir()
