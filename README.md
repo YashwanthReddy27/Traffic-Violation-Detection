@@ -5,7 +5,7 @@ The success of any deep learning model heavily relies on the quality and diversi
 used for training. In our project focusing on traffic violation detection using Deep Learning, 
 meticulous attention was paid to curating and pre-processing a comprehensive dataset. This page 
 elucidates the details of our dataset, encompassing its origins, augmentation techniques employed, 
-and the partitioning strategy adopted for training, validation, and testing. \
+and the partitioning strategy adopted for training, validation, and testing. //
 ## 1.2 Dataset Acquisition and Augmentation
 <div align="justify">
 Our dataset was initially sourced from Kaggle, a 
