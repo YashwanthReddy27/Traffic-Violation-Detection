@@ -113,7 +113,8 @@ inference_and_save_csv(weights_path, image_path, output_csv_path)
 # 5. Metrics Graphs
 <p float="left">
   <img src="./Metrics/Recall.jpg" width="400" />
-  <img src="Metrics/Confusion Matrix.jpg  width="400"/>
+  <img src="./Metrics/Precision Curve.jpg" width="400" /> 
+  <img src="Metrics/Confusion Matrix.jpg"  width="400"/>
 </p>
 <p float="left"> 
     <img src="./Metrics/F1 Score.jpg" width="400" /> 
