@@ -30,4 +30,4 @@ while validating the model's efficacy during training.
 
 # 2 Model Architecture
 ## 2.1
-![Model Architecture]([gttps.guthub/](https://github.com/YashwanthReddy27/Traffic-Violation-Detection/Images/Arch.jpg)
+![Model Architecture](https://github.com/YashwanthReddy27/Traffic-Violation-Detection/Images/Arch.jpg)
