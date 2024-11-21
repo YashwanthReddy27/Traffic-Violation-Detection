@@ -62,6 +62,51 @@ def inference(RES_DIR, data_path):
     return INFER_DIR
 ```
 ```python
-IMAGE_INFER_DIR = inference("path to model weights","path to the image you wanna do inference")
+IMAGE_INFER_DIR = inference("path to model weights", "path to the image you wanna do inference")
 ```
-Sample images from google have been added in Images directory on which i compiled the inference
+Sample images from Google have been added in the Images directory on which I compiled the inference
+
+# 4. Easy OCR
+The Initial OCR implementation was done just to test on number plates to see if it detects well or not
+```python
+import torch
+import pandas as pd
+from pathlib import Path
+
+def inference_and_save_csv(weights_path, image_path, output_csv_path):
+    # Load YOLOv5 model
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path=weights_path, force_reload=True)
+
+    # Run inference
+    results = model(image_path)
+
+    # Get detection results as a Pandas DataFrame
+    detections = results.pandas().xyxy[0]  # Bounding boxes and detection info
+
+    # Debug: Print detection results
+    print(detections)
+
+    # Save detections to a CSV file
+    output_csv_path = Path(output_csv_path)
+    output_csv_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
+    detections.to_csv(output_csv_path, index=False)
+
+    print(f"Detections saved to CSV: {output_csv_path}")
+
+# Example usage
+weights_path = '/content/best (1).pt'
+image_path = '/content/motorcycle-tours-india.jpg'
+output_csv_path = '/content/detections.csv'
+
+inference_and_save_csv(weights_path, image_path, output_csv_path)
+```
+This prints the detections in the image 
+The last code block is similar but not same, this will save the detections of number plates to the csv files 
+```python
+# Example usage
+weights_path = '/content/best (1).pt'
+image_path = '/content/motorcycle-tours-india.jpg'
+output_csv_path = '/content/detections.csv'
+
+inference_and_save_csv(weights_path, image_path, output_csv_path)
+```
