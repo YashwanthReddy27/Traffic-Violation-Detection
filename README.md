@@ -28,8 +28,21 @@ ensuring a balanced data distribution across the subsets. This partitioning stra
 in evaluating the model's performance effectively, as it enables rigorous testing on unseen data 
 while validating the model's efficacy during training. 
 
-# 2 Model Architecture
+# 2. Model Architecture
 ## 2.1
 ![Example Image](./Images/Arch.jpg)
 ## 2.2
 ![Example Image](./Images/Dataflowdiag.jpg)
+
+# 3. Model Training
+<div align="justify">
+Load the data using the roboflow link in the notebook. If the dataset loading fails for you, you can use the dataset provided in this repository with JSON files containing the annotations. Training of the YOLOv5 model is conducted using the motorcycle helmet detection dataset. The 
+model is optimized using stochastic gradient descent (SGD) with momentum, and learning rate 
+scheduling techniques are employed to prevent overfitting and achieve optimal performance. The 
+dataset is partitioned into training, validation, and test sets to accurately assess the model's 
+generalization ability. 
+Performance evaluation is carried out on the test set using standard metrics such as mean average 
+precision (mAP) and precision-recall curves to quantify the model's effectiveness in detecting 
+motorcycle riders wearing helmets. Additionally, qualitative analysis through visual inspection of 
+model predictions is performed to identify potential failure cases and areas for improvement.
+</div>
