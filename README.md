@@ -45,6 +45,7 @@ Performance evaluation is carried out on the test set using standard metrics suc
 precision (mAP) and precision-recall curves to quantify the model's effectiveness in detecting 
 motorcycle riders wearing helmets. Additionally, qualitative analysis through visual inspection of 
 model predictions is performed to identify potential failure cases and areas for improvement.
+</div>
 ```python
 RES_DIR = set_res_dir()
 if TRAIN:
@@ -52,4 +53,4 @@ if TRAIN:
     --img 640 --epochs {EPOCHS} --batch-size 16 --name {RES_DIR}\
     --project /content/Model_Weights  # <-- This is where the best and last training weights are stored.
 
-</div>
+
