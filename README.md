@@ -49,6 +49,16 @@ if TRAIN:
     --img 640 --epochs {EPOCHS} --batch-size 16 --name {RES_DIR}\
     --project /content/Model_Weights  # <-- This is where the best and last training weights are stored.
 
+def inference(RES_DIR, data_path):
+    # Directory to store inference results.
+    infer_dir_count = len(glob.glob('/content/yolov5/runs/detect/*'))
+    print(f"Current number of inference detection directories: {infer_dir_count}")
+    INFER_DIR = f"inference_{infer_dir_count+1}"
+    print(INFER_DIR)
+    # Inference on images.
+    !python detect.py --weights {RES_DIR}/weights/best.pt \
+    --source {data_path} --name {INFER_DIR}
+    return INFER_DIR
 
 
 
