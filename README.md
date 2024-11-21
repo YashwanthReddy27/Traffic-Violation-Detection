@@ -48,7 +48,8 @@ if TRAIN:
     !python train.py --data ../data.yaml --weights yolov5s.pt \
     --img 640 --epochs {EPOCHS} --batch-size 16 --name {RES_DIR}\
     --project /content/Model_Weights  # <-- This is where the best and last training weights are stored.
-
+```
+```python
 def inference(RES_DIR, data_path):
     # Directory to store inference results.
     infer_dir_count = len(glob.glob('/content/yolov5/runs/detect/*'))
@@ -56,9 +57,10 @@ def inference(RES_DIR, data_path):
     INFER_DIR = f"inference_{infer_dir_count+1}"
     print(INFER_DIR)
     # Inference on images.
-    !python detect.py --weights {RES_DIR}/weights/best.pt \
+    !python detect.py --weights {RES_DIR}/weights/best.pt #remove the extra \ this is where the inference image is stored so that you can copy the path and use it to visualize in the last code block of the file
     --source {data_path} --name {INFER_DIR}
     return INFER_DIR
-
-
-
+```
+```python
+IMAGE_INFER_DIR = inference("path to model weights","path to the image you wanna do inference")
+```
