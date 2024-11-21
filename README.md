@@ -22,9 +22,12 @@ training process and enabling the model to learn from labelled data.
 </div>
 
 ## 1.4 Dataset Partitioning
-The augmented dataset was meticulously partitioned into three distinct 
+The augmented dataset was partitioned into three 
 subsets: training, validation, and testing. The partitioning ratio was established as 60:20:20, 
-ensuring a balanced distribution of data across the subsets. This partitioning strategy is paramount 
+ensuring a balanced data distribution across the subsets. This partitioning strategy is paramount 
 in evaluating the model's performance effectively, as it enables rigorous testing on unseen data 
 while validating the model's efficacy during training. 
 
+# 2 Model Architecture
+## 2.1
+![Model Architecture]([gttps.guthub/](https://github.com/YashwanthReddy27/Traffic-Violation-Detection/Images/Arch.jpg)
