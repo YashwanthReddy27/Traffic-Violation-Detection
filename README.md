@@ -31,3 +31,5 @@ while validating the model's efficacy during training.
 # 2 Model Architecture
 ## 2.1
 ![Example Image](./Images/Arch.jpg)
+## 2.2
+!(./Images/Dataflowdiag.jpg)
