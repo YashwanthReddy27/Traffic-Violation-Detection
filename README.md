@@ -8,7 +8,7 @@ The success of any deep learning model heavily relies on the quality and diversi
 ## 1.2 Dataset Acquisition and Augmentation
 
 <div align="justify">
-Our dataset was initially sourced from Kaggle, a prominent platform for sharing and discovering datasets. Specifically, we leveraged a dataset consisting of images depicting individuals riding bicycles, some with helmets and others without. Given the significance of diversity and volume in training robust deep learning models, we augmented the pre-existing dataset of 1000 images. We employed various augmentation techniques to enhance the dataset's diversity and mitigate overfitting. One such method involved augmenting the HUE and BRIGHTNESS of the pictures by ±15% and the SATURATION and EXPOSURE by ±10%. Additionally, a minute amount of NOISE was introduced into the dataset. We significantly expanded the dataset through these augmentation strategies, resulting in a new augmented dataset comprising 3000 images.
+Our dataset was initially sourced from Kaggle, a prominent platform for sharing and discovering datasets. Specifically, we leveraged a dataset of images depicting individuals riding bicycles, some with helmets and others without. Given the significance of diversity and volume in training robust deep learning models, we augmented the pre-existing dataset of 1000 images. We employed various augmentation techniques to enhance the dataset’s diversity and mitigate overfitting. One such method involved augmenting the HUE and BRIGHTNESS of the pictures by ±15% and the SATURATION and EXPOSURE by ±10%. Additionally, a minute amount of NOISE was introduced into the dataset. We significantly expanded the dataset through these augmentation strategies, resulting in a new augmented dataset comprising 3000 images.
 </div>
 
 ## 1.3 Data Augmentation Tools
@@ -18,15 +18,14 @@ Roboflow, a popular platform for managing and augmenting datasets,
 was instrumental in executing the augmentation process. Its user-friendly interface and extensive 
 suite of augmentation options facilitated seamless augmentation while ensuring the integrity of the 
 dataset. Furthermore, Roboflow facilitated dataset annotations, a crucial step in supervising the 
-training process and enabling the model to learn from labelled data. 
+training process and enabling the model to learn from labeled data. 
 </div>
 
 ## 1.4 Dataset Partitioning
-The augmented dataset was partitioned into three 
-subsets: training, validation, and testing. The partitioning ratio was established as 60:20:20, 
+The augmented dataset was partitioned into training, validation, and testing. The partitioning ratio was established as 60:20:20, 
 ensuring a balanced data distribution across the subsets. This partitioning strategy is paramount 
-in evaluating the model's performance effectively, as it enables rigorous testing on unseen data 
-while validating the model's efficacy during training. 
+in evaluating the model’s performance effectively, as it enables rigorous testing on unseen data 
+while validating the model’s efficacy during training. 
 
 # 2. Model Architecture
 ## 2.1
@@ -36,11 +35,11 @@ while validating the model's efficacy during training.
 
 # 3. Model Training
 <div align="justify">
-Load the data using the roboflow link in the notebook. If the dataset loading fails for you, you can use the dataset provided in this repository with JSON files containing the annotations. Training of the YOLOv5 model is conducted using the motorcycle helmet detection dataset. The model is optimized using stochastic gradient descent (SGD) with momentum, and learning rate scheduling techniques are employed to prevent overfitting and achieve optimal performance. The dataset is partitioned into training, validation, and test sets to accurately assess the model's generalization ability. Performance evaluation is carried out on the test set using standard metrics such as mean average precision (mAP) and precision-recall curves to quantify the model's effectiveness in detecting motorcycle riders wearing helmets. Additionally, qualitative analysis through visual inspection of model predictions is performed to identify potential failure cases and areas for improvement.
+Load the data using the roboflow link in the notebook. If the dataset loading fails, you can use the dataset provided in this repository with JSON files containing the annotations. Training of the YOLOv5 model is conducted using the motorcycle helmet detection dataset. The model is optimized using stochastic gradient descent (SGD) with momentum, and learning rate scheduling techniques are employed to prevent overfitting and achieve optimal performance. The dataset is partitioned into training, validation, and test sets to accurately assess the model’s generalization ability. Performance evaluation is performed on the test set using standard metrics such as mean average precision (mAP) and precision-recall curves to quantify the model’s effectiveness in detecting motorcycle riders wearing helmets. Additionally, qualitative analysis through visual inspection of model predictions is performed to identify potential failure cases and areas for improvement.
 </div>
 
 ## Training Script
-In this part of code block you can change the directory in collab where you want to store the model weights
+In this part of the code block you can change the directory in Collab where you want to store the model weights
 
 ```python
 RES_DIR = set_res_dir()
@@ -67,7 +66,7 @@ IMAGE_INFER_DIR = inference("path to model weights", "path to the image you wann
 Sample images from Google have been added in the Images directory on which I compiled the inference
 
 # 4. Easy OCR
-The Initial OCR implementation was done just to test on number plates to see if it detects well or not
+The Initial OCR implementation was done to test on number plates to see if it detects well or not
 ```python
 import torch
 import pandas as pd
@@ -101,7 +100,7 @@ output_csv_path = '/content/detections.csv'
 inference_and_save_csv(weights_path, image_path, output_csv_path)
 ```
 This prints the detections in the image 
-The last code block is similar but not same, this will save the detections of number plates to the csv files 
+The last code block is similar but not the same; this will save the detections of number plates to the CSV files 
 ```python
 # Example usage
 weights_path = '/content/best (1).pt'
