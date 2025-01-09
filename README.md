@@ -1,8 +1,10 @@
+# Project description
+This repository 
 # 1. DATA
 ## 1.1 Dataset
 
 <div align="justify">
-The success of any deep learning model heavily relies on the quality and diversity of the dataset used for training. In our project focusing on traffic violation detection using Deep Learning, meticulous attention was paid to curating and pre-processing a comprehensive dataset. This page elucidates the details of our dataset, encompassing its origins, augmentation techniques employed, and the partitioning strategy adopted for training, validation, and testing.
+The success of any deep learning model heavily relies on the quality and diversity of the dataset used for training. In our project, which focused on traffic violation detection using Deep Learning, meticulous attention was paid to curating and preprocessing a comprehensive dataset. This page elucidates the details of our dataset, encompassing its origins, augmentation techniques employed, and the partitioning strategy adopted for training, validation, and testing.
 </div>
 
 ## 1.2 Dataset Acquisition and Augmentation
