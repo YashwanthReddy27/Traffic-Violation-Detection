@@ -1,5 +1,5 @@
 # Project description
-This repository 
+This repository contains an implementation of a system that detects bikers with no helmets, including the pillions, extracts the number plates of the bike, and saves it to a CSV file.
 # 1. DATA
 ## 1.1 Dataset
 
@@ -41,7 +41,7 @@ Load the data using the roboflow link in the notebook. If the dataset loading fa
 </div>
 
 ## Training Script
-In this part of the code block you can change the directory in Collab where you want to store the model weights
+In this part of the code block, you can change the directory in Collab where you want to store the model weights
 
 ```python
 RES_DIR = set_res_dir()
